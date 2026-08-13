@@ -1,0 +1,16 @@
+displayName: ado_load_test
+testPlan: url_test.jmx
+description: 'ado_load_test'
+engineInstances: 1
+testId: ado_load_test
+testType: JMX
+splitAllCSVs: False
+referenceIdentities:
+- kind: KeyVault
+  type: SystemAssigned
+- kind: Metrics
+  type: SystemAssigned
+autoStop:
+  errorPercentage: 90
+  timeWindow: 60
+  maximumVirtualUsersPerEngine: 5000
